@@ -6,7 +6,6 @@ const Pokemon = () => {
     const pokemon = useSelector(state => {
         return state.pokemon;
     });
-    console.log(pokemon)
     const types = pokemon.types.map(t => <span key={t.type.name} className="type">{t.type.name}</span>);
     const stats = pokemon.stats.map(s => <span key={s.stat.name} className="stat">{s.stat.name}: {s.base_stat}</span>);
     const moves = pokemon.moves.map(m =>
