@@ -7,7 +7,138 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h3, h2{
+  margin: 0;
+  text-transform: capitalize;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 30px;
+  align-items: center;
+  border-bottom: 3px solid black;
+}
+
+.listPokemons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.listPokemons img,
+.pokemonSelected img{
+  width: 200px;
+  height: 200px;
+}
+
+.listPokemons .render-pokemons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.listPokemons .render-pokemons .pokemon{
+  width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid black 10px;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.listPokemons .paginations{
+  display: flex;
+  column-gap: 10px;
+}
+
+.pokemonSelected{
+  margin-top: 50px;
+}
+
+.pokemonSelected-container{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: solid black 5px;
+  width: 60%;
+  border-radius: 20px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.pokemonSelected-container h1{
+  text-transform: capitalize;
+}
+
+.pokemonSelected-container .details-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.pokemonSelected-container .details-container .details{
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+}
+
+.pokemonSelected-container .types{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: self-end;
+}
+
+.pokemonSelected-container .stats{
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+}
+
+.pokemonSelected-container .types .type{
+  border-radius: 20px;
+}
+
+.pokemonSelected-container .stats .stat,
+.pokemonSelected-container .types .type{
+  width: auto;
+  text-align: center;
+  border: 3px solid black;
+  padding: 5px;
+  text-transform: capitalize;
+  min-width: 50px;
+}
+
+.pokemonSelected-container .moves-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pokemonSelected-container .moves,
+.pokemonSelected-container .moves .moves-container{
+  display: flex;
+  row-gap: 10px;
+}
+
+.pokemonSelected-container .moves{
+  flex-direction: column;
+  }
+
+.pokemonSelected-container .moves .moves-container .move{
+  display: flex;
+  flex-direction: column; 
+  width: 170px;
 }

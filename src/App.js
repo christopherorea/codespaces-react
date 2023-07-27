@@ -1,27 +1,16 @@
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import ListPokemons from './components/listPokemons';
+import Navbar from './components/navbar';
+import Pokemon from './components/pokemon';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route element={<ListPokemons />} path="/" />
+        <Route element={<Pokemon /> } path="/pokemon/:id?" />
+      </Routes>
     </div>
   );
 }
