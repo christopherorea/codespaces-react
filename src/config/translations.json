@@ -1,0 +1,18 @@
+{
+    "en": {
+      "translation": {
+        "lrn": "Learned at level: ",
+        "how": "How to get? ",
+        "mvs": "Moves",
+        "ld": "Loading..."
+      }
+    },
+    "es": {
+      "translation": {
+        "lrn": "Aprendido en nivel: ",
+        "how": "¿Cómo obtener? ",
+        "mvs": "Movimientos",
+        "ld": "Cargando..."
+      }
+    }
+  }

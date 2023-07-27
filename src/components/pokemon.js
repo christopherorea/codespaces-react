@@ -1,8 +1,9 @@
 import React from "react";
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 const Pokemon = () => {
-
+  const { t } = useTranslation();
   const pokemon = useSelector(state => {
     return state.pokemon;
   });
@@ -11,8 +12,8 @@ const Pokemon = () => {
   const moves = pokemon.moves.map(m =>
     <span key={m.move.name} className="move">
       <h3>{m.move.name}</h3>
-      <span>Learned at level: {m.version_group_details[0].level_learned_at}</span>
-      <span>How to get it: {m.version_group_details[0].move_learn_method.name}</span>
+      <span>{t('lrn')}{m.version_group_details[0].level_learned_at}</span>
+      <span>{t('how')}{m.version_group_details[0].move_learn_method.name}</span>
     </span>);
 
   return (
@@ -26,7 +27,7 @@ const Pokemon = () => {
           </div>
         </div>
         {moves.length > 0 && <div className="moves">
-          <h2>Moves:</h2>
+          <h2>{t('mvs')}</h2>
           <div className="moves-container">{moves}</div>
         </div>}
       </div>
