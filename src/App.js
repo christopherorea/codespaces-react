@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route element={<ListPokemons />} path="/" />
+        <Route element={<ListPokemons />} exact path="/" />
         <Route element={<Pokemon /> } path="/pokemon/:id?" />
       </Routes>
     </div>
