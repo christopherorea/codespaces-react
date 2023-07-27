@@ -28,9 +28,10 @@ const ListPokemons = () => {
   }, [count]);
 
 
-  const setPokemon = async (id) => {
-    click ++;
+  const setPokemon = async (e, id) => {
+    click = e.detail;
     const actions = {
+      0: () => {},
       1: (data) => {
         setIsLoading(false);
         setSrc(data.sprites.front_default);
@@ -65,7 +66,7 @@ const ListPokemons = () => {
     const id = p.url.split('/')[6];
     return (
       <div
-        onClick={(e) => setPokemon(id)}
+        onClick={(e) => setPokemon(e, id)}
         key={p.name}
         className="pokemon"
       >
